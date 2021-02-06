@@ -11,7 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    EditText text ;
+    EditText Name ;
     Button button;
     TextView textView ;
 
@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        text=(EditText)findViewById(R.id.text);
+        Name =(EditText)findViewById(R.id.Name);
         button=(Button)findViewById(R.id.button);
         textView=(TextView)findViewById(R.id.textView);
 
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String name = text.getText().toString();
+                String name = Name.getText().toString();
                 textView.setText("Hi " + name);
             }
         });
